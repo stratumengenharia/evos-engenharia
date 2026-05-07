@@ -28,6 +28,7 @@
                 <a href="#sobre" class="nav-link">Sobre</a>
                 <a href="#servicos" class="nav-link">Serviços</a>
                 <a href="#diferenciais" class="nav-link">Diferenciais</a>
+                <a href="#blog" class="nav-link">Blog</a>
                 <a href="#contato" class="nav-link">Contato</a>
             </nav>
             <a href="https://wa.me/5537988413010" target="_blank" class="btn btn-header">
@@ -41,9 +42,14 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section com Vídeo -->
     <section class="hero" id="home">
-        <div class="hero-bg"></div>
+        <div class="hero-video-wrapper">
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="img/hero-video-hd.mp4" type="video/mp4">
+            </video>
+            <div class="hero-video-overlay"></div>
+        </div>
         <div class="container hero-content">
             <div class="hero-badge">Soluções em Engenharia</div>
             <h1 class="hero-title">
@@ -62,18 +68,32 @@
                     Solicitar Orçamento
                 </a>
             </div>
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number">Multidisciplinar</span>
-                    <span class="stat-label">Atuação Integrada</span>
+        </div>
+    </section>
+
+    <!-- Contadores -->
+    <section class="counters">
+        <div class="container">
+            <div class="counters-grid">
+                <div class="counter-item">
+                    <div class="counter-icon"><i class="fas fa-hard-hat"></i></div>
+                    <span class="counter-number" data-target="50">0</span><span class="counter-suffix">+</span>
+                    <span class="counter-label">Tipos de Serviço</span>
                 </div>
-                <div class="stat">
-                    <span class="stat-number" data-target="50">50+</span>
-                    <span class="stat-label">Tipos de Serviço</span>
+                <div class="counter-item">
+                    <div class="counter-icon"><i class="fas fa-file-alt"></i></div>
+                    <span class="counter-number" data-target="100">0</span><span class="counter-suffix">%</span>
+                    <span class="counter-label">Conformidade Normativa</span>
                 </div>
-                <div class="stat">
-                    <span class="stat-number">100%</span>
-                    <span class="stat-label">Conformidade Normativa</span>
+                <div class="counter-item">
+                    <div class="counter-icon"><i class="fas fa-map-marked-alt"></i></div>
+                    <span class="counter-number" data-target="27">0</span><span class="counter-suffix"></span>
+                    <span class="counter-label">Estados Atendidos</span>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-icon"><i class="fas fa-users"></i></div>
+                    <span class="counter-number" data-target="2">0</span><span class="counter-suffix"></span>
+                    <span class="counter-label">Áreas de Atuação</span>
                 </div>
             </div>
         </div>
@@ -412,6 +432,34 @@
         </div>
     </section>
 
+    <!-- Clientes -->
+    <section class="section clientes" id="clientes">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Confiança</span>
+                <h2 class="section-title">Empresas que confiam na Evos</h2>
+                <p class="section-desc">Atendemos empresas de diversos segmentos com excelência e compromisso técnico.</p>
+            </div>
+            <div class="clientes-track">
+                <div class="clientes-slide">
+                    <div class="cliente-logo"><i class="fas fa-industry"></i><span>Sua Empresa</span></div>
+                    <div class="cliente-logo"><i class="fas fa-building"></i><span>Construtora</span></div>
+                    <div class="cliente-logo"><i class="fas fa-warehouse"></i><span>Indústria</span></div>
+                    <div class="cliente-logo"><i class="fas fa-store"></i><span>Comércio</span></div>
+                    <div class="cliente-logo"><i class="fas fa-hospital"></i><span>Saúde</span></div>
+                    <div class="cliente-logo"><i class="fas fa-hotel"></i><span>Hotelaria</span></div>
+                    <!-- Duplicado para efeito contínuo -->
+                    <div class="cliente-logo"><i class="fas fa-industry"></i><span>Sua Empresa</span></div>
+                    <div class="cliente-logo"><i class="fas fa-building"></i><span>Construtora</span></div>
+                    <div class="cliente-logo"><i class="fas fa-warehouse"></i><span>Indústria</span></div>
+                    <div class="cliente-logo"><i class="fas fa-store"></i><span>Comércio</span></div>
+                    <div class="cliente-logo"><i class="fas fa-hospital"></i><span>Saúde</span></div>
+                    <div class="cliente-logo"><i class="fas fa-hotel"></i><span>Hotelaria</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA -->
     <section class="cta-section">
         <div class="container">
@@ -426,6 +474,52 @@
                         Enviar Mensagem
                     </a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog / Conteúdo Técnico -->
+    <section class="section blog" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Conteúdo Técnico</span>
+                <h2 class="section-title">Artigos e publicações</h2>
+                <p class="section-desc">Compartilhamos conhecimento técnico para ajudar você a tomar melhores decisões em engenharia.</p>
+            </div>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-img">
+                        <img src="img/hero-bg.jpg" alt="Inspeção predial">
+                        <span class="blog-tag">Laudos</span>
+                    </div>
+                    <div class="blog-body">
+                        <h3>A importância da inspeção predial preventiva</h3>
+                        <p>Entenda por que a inspeção periódica de edificações é essencial para garantir segurança e valorização do patrimônio.</p>
+                        <span class="blog-date"><i class="fas fa-calendar-alt"></i> Em breve</span>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-img">
+                        <img src="img/cta-bg.jpg" alt="NR-12 Segurança">
+                        <span class="blog-tag">Normas</span>
+                    </div>
+                    <div class="blog-body">
+                        <h3>NR-12: o que sua empresa precisa saber</h3>
+                        <p>Guia prático sobre a adequação de máquinas e equipamentos à Norma Regulamentadora 12.</p>
+                        <span class="blog-date"><i class="fas fa-calendar-alt"></i> Em breve</span>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-img">
+                        <img src="img/servicos.jpg" alt="BIM Projetos">
+                        <span class="blog-tag">Projetos</span>
+                    </div>
+                    <div class="blog-body">
+                        <h3>BIM na engenharia: vantagens da modelagem 3D</h3>
+                        <p>Como a tecnologia BIM otimiza projetos, reduz custos e melhora a compatibilização entre disciplinas.</p>
+                        <span class="blog-date"><i class="fas fa-calendar-alt"></i> Em breve</span>
+                    </div>
+                </article>
             </div>
         </div>
     </section>

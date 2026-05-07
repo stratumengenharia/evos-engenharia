@@ -117,6 +117,36 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3000);
     });
 
+    // --- Animated counters ---
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counters = entry.target.querySelectorAll('.counter-number');
+                counters.forEach(counter => {
+                    const target = +counter.dataset.target;
+                    const duration = 2000;
+                    const step = target / (duration / 16);
+                    let current = 0;
+
+                    const updateCounter = () => {
+                        current += step;
+                        if (current < target) {
+                            counter.textContent = Math.floor(current);
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            counter.textContent = target;
+                        }
+                    };
+                    updateCounter();
+                });
+                counterObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+
+    const countersSection = document.querySelector('.counters');
+    if (countersSection) counterObserver.observe(countersSection);
+
     // --- Smooth reveal on scroll (Intersection Observer) ---
     const observerOptions = {
         threshold: 0.1,
@@ -134,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add reveal animation to elements
     const revealElements = document.querySelectorAll(
-        '.servico-categoria, .diferencial-card, .info-card, .sobre-card'
+        '.servico-categoria, .diferencial-card, .info-card, .sobre-card, .blog-card'
     );
 
     revealElements.forEach((el, index) => {
