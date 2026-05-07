@@ -21,6 +21,27 @@ document.addEventListener('DOMContentLoaded', () => {
         updateActiveNav();
     });
 
+    // --- Hero video slideshow ---
+    const heroVideos = document.querySelectorAll('.hero-video');
+    let currentVideo = 0;
+    const videoDuration = 8000; // 8 seconds per video
+
+    function switchVideo() {
+        heroVideos[currentVideo].classList.remove('active');
+        heroVideos[currentVideo].pause();
+        heroVideos[currentVideo].currentTime = 0;
+
+        currentVideo = (currentVideo + 1) % heroVideos.length;
+
+        heroVideos[currentVideo].currentTime = 0;
+        heroVideos[currentVideo].play();
+        heroVideos[currentVideo].classList.add('active');
+    }
+
+    if (heroVideos.length > 1) {
+        setInterval(switchVideo, videoDuration);
+    }
+
     // --- Mobile menu toggle ---
     const menuToggle = document.getElementById('menuToggle');
     const nav = document.getElementById('nav');
