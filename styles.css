@@ -1057,12 +1057,15 @@ img {
 }
 
 .blog-card {
+    display: block;
     background: var(--white);
     border-radius: var(--radius-md);
     overflow: hidden;
     box-shadow: var(--shadow-sm);
     border: 1px solid var(--gray-100);
     transition: var(--transition);
+    color: inherit;
+    text-decoration: none;
 }
 
 .blog-card:hover {
