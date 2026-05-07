@@ -637,37 +637,92 @@ img {
 }
 
 .servico-categoria {
-    margin-bottom: 40px;
+    margin-bottom: 12px;
 }
 
 .categoria-header {
     display: flex;
     align-items: center;
     gap: 16px;
-    margin-bottom: 20px;
+    padding: 16px 20px;
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+    text-align: left;
+    font-family: inherit;
+    outline: none;
+}
+
+.categoria-header:hover {
+    background: var(--white);
+    border-color: var(--primary-light);
+    box-shadow: var(--shadow-sm);
+}
+
+.categoria-header.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+}
+
+.categoria-header.active h3 {
+    color: var(--white);
+}
+
+.categoria-header.active .categoria-icon {
+    background: rgba(255,255,255,0.2);
+}
+
+.categoria-header.active .categoria-arrow {
+    color: var(--white);
+    transform: rotate(180deg);
 }
 
 .categoria-icon {
-    width: 48px;
-    height: 48px;
+    width: 42px;
+    height: 42px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, var(--primary), var(--primary-light));
     border-radius: var(--radius-sm);
     color: var(--white);
-    font-size: 1.1rem;
+    font-size: 1rem;
     flex-shrink: 0;
 }
 
 .categoria-header h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    flex: 1;
+}
+
+.categoria-arrow {
+    font-size: 0.9rem;
+    color: var(--gray-400);
+    transition: transform 0.3s ease;
+    margin-left: auto;
 }
 
 .servico-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 12px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0 20px;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-top: none;
+    border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+}
+
+.servico-grid.open {
+    max-height: 800px;
+    padding: 20px;
 }
 
 .servico-item {

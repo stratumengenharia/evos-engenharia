@@ -96,6 +96,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- Service accordion ---
+    document.querySelectorAll('.categoria-header').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const grid = btn.nextElementSibling;
+            const isOpen = btn.classList.contains('active');
+
+            // Close all in same tab
+            btn.closest('.tab-content').querySelectorAll('.categoria-header').forEach(b => {
+                b.classList.remove('active');
+                b.nextElementSibling.classList.remove('open');
+            });
+
+            // Toggle clicked one
+            if (!isOpen) {
+                btn.classList.add('active');
+                grid.classList.add('open');
+            }
+        });
+    });
+
     // --- Back to top ---
     backToTop.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
