@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (servico) whatsappMsg += `Serviço de interesse: ${servico}%0A`;
         whatsappMsg += `%0A${mensagem}`;
 
-        const whatsappURL = `https://wa.me/5537988413010?text=${whatsappMsg}`;
+        const whatsappURL = `https://wa.me/5531993157247?text=${whatsappMsg}`;
         window.open(whatsappURL, '_blank');
 
         // Show success feedback
